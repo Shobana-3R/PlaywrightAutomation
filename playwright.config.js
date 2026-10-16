@@ -42,7 +42,7 @@ module.exports = defineConfig({
 
         browserName: 'chromium',
 
-        headless: false,
+        headless: true,
 
         screenshot: 'on',
 
