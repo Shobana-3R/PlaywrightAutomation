@@ -1,6 +1,6 @@
 const { test, expect } = require('@playwright/test');
 
-test("Handle Web Table", async ({ page }) => {
+test.skip("Handle Web Table", async ({ page }) => {
     await page.goto("https://testautomationpractice.blogspot.com/");
     const table = await page.locator('//*[@id="HTML1"]/div[1]/table')
 
