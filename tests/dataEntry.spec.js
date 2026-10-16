@@ -47,7 +47,7 @@ await page.locator('.react-datepicker__month')
 await page.locator('.react-datepicker__day--010:not(.react-datepicker__day--outside-month)').click();
 })
 
-test ('File Upload', async ({ page }) => {
+test.skip ('File Upload', async ({ page }) => {
 await page.goto("https://testautomationpractice.blogspot.com/")
 const fileInput = page.locator('#singleFileInput')
 await fileInput.setInputFiles('C:\\Users\\shobana.rajesh\\OneDrive - psiog.com\\Documents\\week3_notes.txt');

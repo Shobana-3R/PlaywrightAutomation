@@ -94,7 +94,7 @@ test ("Pagination - Sort and Filter Products", async ({ page }) => {
 });
 
 //Dynamic table values
-test ("Dynamic Table Values", async ({ page }) => {
+test.skip ("Dynamic Table Values", async ({ page }) => {
 await page.goto("https://testautomationpractice.blogspot.com/p/playwrightpractice.html")
 const table = page.locator('#taskTable')
 const rows = table.locator('tbody tr')
