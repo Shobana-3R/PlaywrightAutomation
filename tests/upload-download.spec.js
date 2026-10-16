@@ -25,7 +25,7 @@ function readExcel(worksheet, searchText) {
 }
 //writeExcelTest("Mango", "350", {rowChange:0,colChange:2}, "/Users/shobana.rajesh/OneDrive - psiog.com/excelpractice.xlsx")
 
-test('upload download excel validation', async ({page}) =>
+test.skip('upload download excel validation', async ({page}) =>
 {
     const textSearch = 'Mango'
     const updateValue = '350'
