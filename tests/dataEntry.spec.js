@@ -5,11 +5,11 @@ test ('data Entry - Alerts', async ({page}) =>
 {
 await page.goto("https://testautomationpractice.blogspot.com/")
 page.once('dialog',dialog => dialog.accept())
-await page.locator('#confirmBtn').click() //Accept alert
+await page.locator('//*[@id="confirmBtn"]').click() //Accept alert
 await expect(page.locator('#demo')).toContainText('You pressed OK!');
 
 page.once('dialog',dialog => dialog.dismiss())
-await page.locator('#confirmBtn').click() //Decline alert
+await page.locator('//*[@id="confirmBtn"]').click() //Decline alert
 await expect(page.locator('#demo')).toContainText('You pressed Cancel!');
 
 page.once('dialog', async dialog => {
