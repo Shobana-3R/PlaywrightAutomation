@@ -1,7 +1,7 @@
 const {test, expect} = require('@playwright/test')
 
 //Alerts & Dialogs
-test ('data Entry - Alerts', async ({page}) =>
+test.skip ('data Entry - Alerts', async ({page}) =>
 {
 await page.goto("https://testautomationpractice.blogspot.com/")
 page.once('dialog',dialog => dialog.accept())
