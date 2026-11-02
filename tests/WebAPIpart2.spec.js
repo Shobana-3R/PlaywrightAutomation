@@ -18,7 +18,7 @@ webContext = await browser.newContext({storageState: 'state.json'})
 })
 
 //valid Login
-test.only ('Login after Storage', async () =>
+test ('Login after Storage', async () =>
 {
 const page = await webContext.newPage()
 await page.goto("https://rahulshettyacademy.com/client")
