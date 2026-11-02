@@ -1,6 +1,6 @@
 const { test, expect } = require('@playwright/test');
 
-test.skip("Handle Web Table", async ({ page }) => {
+test("Handle Web Table", async ({ page }) => {
     await page.goto("https://testautomationpractice.blogspot.com/");
     const table = await page.locator('//*[@id="HTML1"]/div[1]/table')
 
@@ -94,7 +94,7 @@ test ("Pagination - Sort and Filter Products", async ({ page }) => {
 });
 
 //Dynamic table values
-test.skip ("Dynamic Table Values", async ({ page }) => {
+test ("Dynamic Table Values", async ({ page }) => {
 await page.goto("https://testautomationpractice.blogspot.com/p/playwrightpractice.html")
 const table = page.locator('#taskTable')
 const rows = table.locator('tbody tr')
