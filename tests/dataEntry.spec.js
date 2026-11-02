@@ -1,7 +1,7 @@
 const {test, expect} = require('@playwright/test')
 
 //Alerts & Dialogs
-test.skip ('data Entry - Alerts', async ({page}) =>
+test('data Entry - Alerts', async ({page}) =>
 {
 await page.goto("https://testautomationpractice.blogspot.com/")
 page.once('dialog',dialog => dialog.accept())
@@ -47,12 +47,12 @@ await page.locator('.react-datepicker__month')
 await page.locator('.react-datepicker__day--010:not(.react-datepicker__day--outside-month)').click();
 })
 
-test.skip ('File Upload', async ({ page }) => {
+test('File Upload', async ({ page }) => {
 await page.goto("https://testautomationpractice.blogspot.com/")
 const fileInput = page.locator('#singleFileInput')
-await fileInput.setInputFiles('C:\\Users\\shobana.rajesh\\OneDrive - psiog.com\\Documents\\week3_notes.txt');
+await fileInput.setInputFiles('./test-data/compare.txt');
 await page.getByRole('button', { name: 'Upload Single File' }).click();
-await expect(page.locator('#singleFileStatus')).toContainText('week3_notes.txt');
+await expect(page.locator('#singleFileStatus')).toContainText('compare');
 });
 
 

@@ -1,0 +1,135 @@
+Application URL: https://concern-vault.emergent.host
+The application currently supports the following end-to-end business flows:
+File a report
+Select organization/company
+Select violation category
+Accept terms and conditions
+Enter incident details
+Create follow-up password
+Submit the report and generate a report key
+Admin login and access the dashboard
+View and filter reports
+Update report status and provide resolution
+Send messages to the reporter
+Reporter follows up using the report key and password
+View updated report status/resolution
+Export incidents as CSV
+View overall case status through the Trust Report
+
+TC-01 Submit anonymous report – happy path
+1. Click on file a report
+2. Step1: select an organization from the list and click on continue
+3. Step2: Select a violation category from cards and click on continue
+4. Step3: check "I have accepted terms" checkbox and click on continue button
+5. Step4: Describe the incident. Fill the mandatory field - Description more than 10 characters and click on continue
+6. Step5: type a follow up password - Test@123 and confirm password. Click on submit report
+7. Store the generated report key in the page. 
+
+
+Create a JavaScript test script, Use appropriate locators and assertions, Save the script under your tests/ folder for 
+TC-05 Follow up on submitted report using Report Key + Password
+Test Data: username: demo@navex.com, password:demo1234
+Preconditions: user is logged in https://concern-vault.emergent.host/admin/login
+user can see lot of incidents reported
+Steps: 
+1. Click on any report key with status as New from the reports table
+2. the report page opens for the corresponding page for the admin to take the action
+3. from the case management status dropdown select the status to 'Resolved' and click on save changes button
+4. click on the 'Back to dashboard' at top of the page.
+
+Expected Results: validate in the table for the corresponding report key, the status gets changed from New to Resolved
+
+
+C. Defect management
+1. Which tool is used to log defects?
+2. What information is mandatory when creating a defect?
+3. How are severity and priority defined?
+4. Who assigns defects to developers?
+5. What are the agreed turnaround times for critical, high and medium defects?
+6. How are defects linked to user stories, test cases and releases?
+7. What are the defect lifecycle statuses?
+8. Who decides whether a defect is a blocker for release?
+9. How are duplicate defects and rejected defects handled?
+10. How is retesting performed after a fix?
+11. Do we need to run regression for every defect fix?
+12. Are defect triage meetings conducted daily or at another frequency?
+13. Is there a backlog of open defects that the incoming QA engineers need to take over?
+14. Do you track defect leakage, reopened defects, production incidents or root causes?
+
+D. Test environments and test data
+1. What environments are available — development, QA, integration, staging and UAT?
+2. Which environment should our QA team use for daily testing?
+3. How often are builds deployed to the QA environment?
+4. Who manages deployments and environment availability?
+5. Are environment refreshes scheduled?
+6. Do environments have the same configuration as production?
+7. Are there dependencies on other services, APIs or third-party systems?
+8. How is test data created, maintained, reset and cleaned up?
+9. Is synthetic or masked data available for testing?
+10. Are there reusable datasets for different business scenarios?
+11. Are there restrictions on creating or deleting test cases, users or reports?
+12. What is the process when an environment is down or test data becomes unusable?
+13. Are there known differences between local, QA and cloud execution environments?
+14. Are service virtualization, mocks or stubs available when dependencies are unavailable?
+Because EthicsPoint handles sensitive reports, ask specifically about approved test-data practices, role-based access and restrictions on using production data. Do not assume that real reporter details or real case information can be used for testing.
+
+
+6. API, integrations and non-functional testing
+These questions help uncover testing responsibilities that may not be obvious from the UI demo.
+API and integration testing
+- Are APIs documented in Swagger/OpenAPI, Postman collections or another tool?
+- Does the team perform API testing independently of UI testing?
+- Which services and external systems does EthicsPoint integrate with?
+- Are API contracts and schemas available?
+- How are authentication, authorization and token expiry tested?
+- How are API errors, timeouts, retries and duplicate requests handled?
+- Are there integration environments or mocks for dependent services?
+- Who owns integration testing when an API is developed by another Scrum team?
+- Are database validations permitted, and what access is available?
+- How do we verify that UI changes are correctly persisted and reflected in downstream systems?
+
+Non-functional testing
+- Who owns performance, load and stress testing?
+- Are there defined response-time or throughput targets?
+- Is security testing handled by a dedicated security team?
+- Are accessibility and cross-browser compatibility in scope?
+- How are authorization boundaries and sensitive-data exposure tested?
+- Are audit logs and data-retention rules part of QA validation?
+- Are disaster recovery, resilience and availability scenarios tested?
+- Are there compliance requirements that influence the testing process?
+You do not need to take ownership of all these areas. The goal is to understand what your QA team is expected to cover and what specialist teams handle.
+
+7. Roles, responsibilities and communication
+Clarify the working arrangement so that you and the other incoming QA can operate independently without duplicating effort.
+1. Which two Scrum teams will each QA engineer join?
+2. Will we attend the daily stand-up, sprint planning, backlog refinement, sprint review and retrospective?
+3. Who will assign daily testing tasks and prioritize competing requests?
+4. Who approves test cases and QA sign-off?
+5. Will we work directly with product owners and business analysts for requirement clarifications?
+6. Who should be contacted for application walkthroughs and technical questions?
+7. Is there an existing onboarding document or knowledge-transfer plan?
+8. Are there recordings of previous demos or training sessions?
+9. Who owns access requests for repositories, environments, test management and CI/CD?
+10. How should we report daily progress, blockers and risks?
+11. Are there established QA metrics or a standard reporting template?
+12. Will we have a designated mentor or existing QA engineer to support onboarding?
+13. Are we expected to contribute to team-wide QA standards, automation practices or process improvements?
+14. How are dependencies and blockers escalated across the eight Scrum teams?
+15. What deliverables are expected from us at the end of the first sprint?
+
+
+1. Can you explain the overall EthicsPoint application and its major business workflows?
+2. Can we have a complete end-to-end application demo using an approved test environment?
+3. Which two Scrum teams will we support, and what functionality does each team own?
+4. What are the responsibilities of the two incoming QA engineers?
+5. Could you walk us through the QA process for a story from refinement through sign-off?
+6. Where are the existing test cases, regression suites and QA documentation maintained?
+7. What are the current sprint's priorities, and what should we start testing first?
+8. Which environments, test data and access permissions will we need?
+9. How are defects logged, prioritized, retested and closed?
+10. Is there an existing Playwright or other automation framework and repository?
+11. Which regression scenarios should we automate first?
+12. How are automated tests executed through CI/CD, and where are results reported?
+13. What is the expected balance between manual testing and automation?
+14. What are the current quality challenges, known defects and biggest testing bottlenecks?
+15. What should we deliver in our first two sprints, and who will support our onboarding?
